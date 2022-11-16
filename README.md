@@ -1,1 +1,1 @@
-# Simplification
+# Utility calculator.
