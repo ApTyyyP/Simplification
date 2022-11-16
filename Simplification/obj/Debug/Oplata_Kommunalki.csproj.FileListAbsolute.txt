@@ -15,4 +15,3 @@ D:\Test\Simplification\Simplification\bin\Debug\Simplification.pdb
 D:\Test\Simplification\Simplification\obj\Debug\Simplification.Kommunalka_Form.resources
 D:\Test\Simplification\Simplification\obj\Debug\Simplification.Properties.Resources.resources
 D:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csproj.GenerateResource.Cache
-D:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csprojResolveAssemblyReference.cache

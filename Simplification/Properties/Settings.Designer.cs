@@ -110,18 +110,6 @@ namespace Simplification.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string obsl_textBox {
-            get {
-                return ((string)(this["obsl_textBox"]));
-            }
-            set {
-                this["obsl_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string musor_textBox {
             get {
                 return ((string)(this["musor_textBox"]));
@@ -134,12 +122,12 @@ namespace Simplification.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prir_gas_textBox {
+        public string prir_gas_cena_textBox {
             get {
-                return ((string)(this["prir_gas_textBox"]));
+                return ((string)(this["prir_gas_cena_textBox"]));
             }
             set {
-                this["prir_gas_textBox"] = value;
+                this["prir_gas_cena_textBox"] = value;
             }
         }
         
@@ -158,24 +146,24 @@ namespace Simplification.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string otoplenie_abonplata_textBox {
+        public string prir_gas_t_textBox {
             get {
-                return ((string)(this["otoplenie_abonplata_textBox"]));
+                return ((string)(this["prir_gas_t_textBox"]));
             }
             set {
-                this["otoplenie_abonplata_textBox"] = value;
+                this["prir_gas_t_textBox"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string otoplenie_textBox {
+        public string prir_gas_n_textBox {
             get {
-                return ((string)(this["otoplenie_textBox"]));
+                return ((string)(this["prir_gas_n_textBox"]));
             }
             set {
-                this["otoplenie_textBox"] = value;
+                this["prir_gas_n_textBox"] = value;
             }
         }
         
@@ -188,78 +176,6 @@ namespace Simplification.Properties {
             }
             set {
                 this["voda_abonplata_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string arenda_2_textBox {
-            get {
-                return ((string)(this["arenda_2_textBox"]));
-            }
-            set {
-                this["arenda_2_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_tarif_2_textBox {
-            get {
-                return ((string)(this["svet_tarif_2_textBox"]));
-            }
-            set {
-                this["svet_tarif_2_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_t_2_textBox {
-            get {
-                return ((string)(this["svet_t_2_textBox"]));
-            }
-            set {
-                this["svet_t_2_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_n_2_textBox {
-            get {
-                return ((string)(this["svet_n_2_textBox"]));
-            }
-            set {
-                this["svet_n_2_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_textBox {
-            get {
-                return ((string)(this["voda_textBox"]));
-            }
-            set {
-                this["voda_textBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string signal_textBox {
-            get {
-                return ((string)(this["signal_textBox"]));
-            }
-            set {
-                this["signal_textBox"] = value;
             }
         }
     }
