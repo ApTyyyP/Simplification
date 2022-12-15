@@ -178,5 +178,17 @@ namespace Simplification.Properties {
                 this["voda_abonplata_textBox"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string voda_otvod_textBox {
+            get {
+                return ((string)(this["voda_otvod_textBox"]));
+            }
+            set {
+                this["voda_otvod_textBox"] = value;
+            }
+        }
     }
 }

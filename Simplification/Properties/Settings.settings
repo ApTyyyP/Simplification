@@ -41,5 +41,8 @@
     <Setting Name="voda_abonplata_textBox" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="voda_otvod_textBox" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

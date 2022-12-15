@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -48,6 +49,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.voda_otvod_textBox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.voda_abonplata_textBox = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -93,7 +96,7 @@
             this.clear_as_btn.Location = new System.Drawing.Point(4, 10);
             this.clear_as_btn.Name = "clear_as_btn";
             this.clear_as_btn.Size = new System.Drawing.Size(144, 47);
-            this.clear_as_btn.TabIndex = 16;
+            this.clear_as_btn.TabIndex = 17;
             this.clear_as_btn.Text = "Очистить";
             this.clear_as_btn.UseVisualStyleBackColor = true;
             this.clear_as_btn.Click += new System.EventHandler(this.clear_as_btn_Click);
@@ -121,6 +124,7 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = global::Simplification.Properties.Resources.bg;
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label21);
@@ -140,11 +144,21 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(1, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 20);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Водоотвод (цена за 1 куб):";
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(1, 251);
+            this.label23.Location = new System.Drawing.Point(1, 283);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(142, 20);
             this.label23.TabIndex = 51;
@@ -154,7 +168,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(132, 318);
+            this.label9.Location = new System.Drawing.Point(132, 350);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 50;
@@ -164,7 +178,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(119, 352);
+            this.label21.Location = new System.Drawing.Point(119, 384);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(92, 20);
             this.label21.TabIndex = 49;
@@ -174,7 +188,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(1, 386);
+            this.label16.Location = new System.Drawing.Point(1, 418);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(161, 20);
             this.label16.TabIndex = 48;
@@ -214,7 +228,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(1, 284);
+            this.label7.Location = new System.Drawing.Point(1, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(198, 20);
             this.label7.TabIndex = 44;
@@ -224,7 +238,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(1, 420);
+            this.label3.Location = new System.Drawing.Point(1, 452);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 42;
@@ -285,6 +299,8 @@
             // groupBox2
             // 
             this.groupBox2.BackgroundImage = global::Simplification.Properties.Resources.bg;
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.voda_otvod_textBox);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.voda_abonplata_textBox);
             this.groupBox2.Controls.Add(this.groupBox5);
@@ -315,11 +331,34 @@
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(90, 251);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 20);
+            this.label14.TabIndex = 70;
+            this.label14.Text = "грн";
+            // 
+            // voda_otvod_textBox
+            // 
+            this.voda_otvod_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.voda_otvod_textBox.Location = new System.Drawing.Point(2, 248);
+            this.voda_otvod_textBox.MaxLength = 6;
+            this.voda_otvod_textBox.Name = "voda_otvod_textBox";
+            this.voda_otvod_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.voda_otvod_textBox.Size = new System.Drawing.Size(82, 27);
+            this.voda_otvod_textBox.TabIndex = 7;
+            this.voda_otvod_textBox.Text = "0";
+            this.voda_otvod_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.voda_otvod_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.voda_otvod_textBox_KeyPress);
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(90, 250);
+            this.label24.Location = new System.Drawing.Point(90, 282);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(36, 20);
             this.label24.TabIndex = 68;
@@ -328,12 +367,12 @@
             // voda_abonplata_textBox
             // 
             this.voda_abonplata_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.voda_abonplata_textBox.Location = new System.Drawing.Point(2, 249);
+            this.voda_abonplata_textBox.Location = new System.Drawing.Point(2, 281);
             this.voda_abonplata_textBox.MaxLength = 6;
             this.voda_abonplata_textBox.Name = "voda_abonplata_textBox";
             this.voda_abonplata_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.voda_abonplata_textBox.Size = new System.Drawing.Size(82, 27);
-            this.voda_abonplata_textBox.TabIndex = 7;
+            this.voda_abonplata_textBox.TabIndex = 8;
             this.voda_abonplata_textBox.Text = "0";
             this.voda_abonplata_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.voda_abonplata_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.voda_abonplata_textBox_KeyPress);
@@ -357,7 +396,7 @@
             this.exit_as_btn.Location = new System.Drawing.Point(4, 10);
             this.exit_as_btn.Name = "exit_as_btn";
             this.exit_as_btn.Size = new System.Drawing.Size(144, 47);
-            this.exit_as_btn.TabIndex = 17;
+            this.exit_as_btn.TabIndex = 18;
             this.exit_as_btn.Text = "Выход";
             this.exit_as_btn.UseVisualStyleBackColor = true;
             this.exit_as_btn.Click += new System.EventHandler(this.exit_as_btn_Click);
@@ -365,12 +404,12 @@
             // prir_gas_t_textBox
             // 
             this.prir_gas_t_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.prir_gas_t_textBox.Location = new System.Drawing.Point(2, 317);
+            this.prir_gas_t_textBox.Location = new System.Drawing.Point(2, 349);
             this.prir_gas_t_textBox.MaxLength = 6;
             this.prir_gas_t_textBox.Name = "prir_gas_t_textBox";
             this.prir_gas_t_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.prir_gas_t_textBox.Size = new System.Drawing.Size(82, 27);
-            this.prir_gas_t_textBox.TabIndex = 9;
+            this.prir_gas_t_textBox.TabIndex = 10;
             this.prir_gas_t_textBox.Text = "0";
             this.prir_gas_t_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.prir_gas_t_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prir_gas_t_textBox_textBox_KeyPress);
@@ -394,7 +433,7 @@
             this.copy_as_btn.Location = new System.Drawing.Point(4, 10);
             this.copy_as_btn.Name = "copy_as_btn";
             this.copy_as_btn.Size = new System.Drawing.Size(144, 47);
-            this.copy_as_btn.TabIndex = 15;
+            this.copy_as_btn.TabIndex = 16;
             this.copy_as_btn.Text = "Копировать";
             this.copy_as_btn.UseVisualStyleBackColor = true;
             this.copy_as_btn.Click += new System.EventHandler(this.copy_as_btn_Click);
@@ -432,7 +471,7 @@
             this.text_as.Name = "text_as";
             this.text_as.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.text_as.Size = new System.Drawing.Size(420, 385);
-            this.text_as.TabIndex = 14;
+            this.text_as.TabIndex = 15;
             // 
             // groupBox3
             // 
@@ -453,7 +492,7 @@
             this.addshablon_as_btn.Location = new System.Drawing.Point(4, 10);
             this.addshablon_as_btn.Name = "addshablon_as_btn";
             this.addshablon_as_btn.Size = new System.Drawing.Size(144, 47);
-            this.addshablon_as_btn.TabIndex = 13;
+            this.addshablon_as_btn.TabIndex = 14;
             this.addshablon_as_btn.Text = "Создать шаблон";
             this.addshablon_as_btn.UseVisualStyleBackColor = true;
             this.addshablon_as_btn.Click += new System.EventHandler(this.addshablon_as_btn_Click);
@@ -461,12 +500,12 @@
             // prir_gas_n_textBox
             // 
             this.prir_gas_n_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.prir_gas_n_textBox.Location = new System.Drawing.Point(2, 351);
+            this.prir_gas_n_textBox.Location = new System.Drawing.Point(2, 383);
             this.prir_gas_n_textBox.MaxLength = 8;
             this.prir_gas_n_textBox.Name = "prir_gas_n_textBox";
             this.prir_gas_n_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.prir_gas_n_textBox.Size = new System.Drawing.Size(82, 27);
-            this.prir_gas_n_textBox.TabIndex = 10;
+            this.prir_gas_n_textBox.TabIndex = 11;
             this.prir_gas_n_textBox.Text = "0";
             this.prir_gas_n_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.prir_gas_n_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prir_gas_n_textBox_KeyPress);
@@ -475,7 +514,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(90, 386);
+            this.label20.Location = new System.Drawing.Point(90, 418);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(36, 20);
             this.label20.TabIndex = 60;
@@ -485,7 +524,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(90, 284);
+            this.label19.Location = new System.Drawing.Point(90, 316);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(36, 20);
             this.label19.TabIndex = 59;
@@ -495,7 +534,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(90, 420);
+            this.label18.Location = new System.Drawing.Point(90, 452);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(36, 20);
             this.label18.TabIndex = 58;
@@ -504,12 +543,12 @@
             // raspr_prir_gas_textBox
             // 
             this.raspr_prir_gas_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.raspr_prir_gas_textBox.Location = new System.Drawing.Point(2, 385);
+            this.raspr_prir_gas_textBox.Location = new System.Drawing.Point(2, 417);
             this.raspr_prir_gas_textBox.MaxLength = 6;
             this.raspr_prir_gas_textBox.Name = "raspr_prir_gas_textBox";
             this.raspr_prir_gas_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.raspr_prir_gas_textBox.Size = new System.Drawing.Size(82, 27);
-            this.raspr_prir_gas_textBox.TabIndex = 11;
+            this.raspr_prir_gas_textBox.TabIndex = 12;
             this.raspr_prir_gas_textBox.Text = "0";
             this.raspr_prir_gas_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.raspr_prir_gas_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.raspr_prir_gas_textBox_KeyPress);
@@ -517,12 +556,12 @@
             // prir_gas_cena_textBox
             // 
             this.prir_gas_cena_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.prir_gas_cena_textBox.Location = new System.Drawing.Point(2, 283);
+            this.prir_gas_cena_textBox.Location = new System.Drawing.Point(2, 315);
             this.prir_gas_cena_textBox.MaxLength = 7;
             this.prir_gas_cena_textBox.Name = "prir_gas_cena_textBox";
             this.prir_gas_cena_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.prir_gas_cena_textBox.Size = new System.Drawing.Size(82, 27);
-            this.prir_gas_cena_textBox.TabIndex = 8;
+            this.prir_gas_cena_textBox.TabIndex = 9;
             this.prir_gas_cena_textBox.Text = "0";
             this.prir_gas_cena_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.prir_gas_cena_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prir_gas_textBox_KeyPress);
@@ -530,12 +569,12 @@
             // musor_textBox
             // 
             this.musor_textBox.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.musor_textBox.Location = new System.Drawing.Point(2, 419);
+            this.musor_textBox.Location = new System.Drawing.Point(2, 451);
             this.musor_textBox.MaxLength = 5;
             this.musor_textBox.Name = "musor_textBox";
             this.musor_textBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.musor_textBox.Size = new System.Drawing.Size(82, 27);
-            this.musor_textBox.TabIndex = 12;
+            this.musor_textBox.TabIndex = 13;
             this.musor_textBox.Text = "0";
             this.musor_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.musor_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.musor_textBox_KeyPress);
@@ -709,5 +748,8 @@
         private System.Windows.Forms.TextBox svet_n_textBox;
         private System.Windows.Forms.TextBox arenda_textBox;
         private System.Windows.Forms.TextBox svet_t_textBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox voda_otvod_textBox;
     }
 }
