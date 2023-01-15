@@ -2,47 +2,47 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Simplification.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="arenda_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="arenda_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="svet_tarif_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="svet_tarif_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="svet_t_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="svet_t_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="svet_n_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="svet_n_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="voda_cena_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voda_cena_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="voda_t_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voda_t_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="voda_n_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voda_n_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="musor_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="musor_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="prir_gas_cena_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="prir_gas_cena_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="raspr_prir_gas_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="raspr_prir_gas_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="prir_gas_t_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="prir_gas_t_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="prir_gas_n_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="prir_gas_n_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="voda_abonplata_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voda_abonplata_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="voda_otvod_textBox" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voda_otvod_textBox" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

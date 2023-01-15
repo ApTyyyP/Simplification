@@ -25,10 +25,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string arenda_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double arenda_textBox {
             get {
-                return ((string)(this["arenda_textBox"]));
+                return ((double)(this["arenda_textBox"]));
             }
             set {
                 this["arenda_textBox"] = value;
@@ -37,10 +37,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_tarif_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double svet_tarif_textBox {
             get {
-                return ((string)(this["svet_tarif_textBox"]));
+                return ((double)(this["svet_tarif_textBox"]));
             }
             set {
                 this["svet_tarif_textBox"] = value;
@@ -49,10 +49,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_t_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double svet_t_textBox {
             get {
-                return ((string)(this["svet_t_textBox"]));
+                return ((double)(this["svet_t_textBox"]));
             }
             set {
                 this["svet_t_textBox"] = value;
@@ -61,10 +61,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string svet_n_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double svet_n_textBox {
             get {
-                return ((string)(this["svet_n_textBox"]));
+                return ((double)(this["svet_n_textBox"]));
             }
             set {
                 this["svet_n_textBox"] = value;
@@ -73,10 +73,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_cena_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double voda_cena_textBox {
             get {
-                return ((string)(this["voda_cena_textBox"]));
+                return ((double)(this["voda_cena_textBox"]));
             }
             set {
                 this["voda_cena_textBox"] = value;
@@ -85,10 +85,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_t_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double voda_t_textBox {
             get {
-                return ((string)(this["voda_t_textBox"]));
+                return ((double)(this["voda_t_textBox"]));
             }
             set {
                 this["voda_t_textBox"] = value;
@@ -97,10 +97,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_n_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double voda_n_textBox {
             get {
-                return ((string)(this["voda_n_textBox"]));
+                return ((double)(this["voda_n_textBox"]));
             }
             set {
                 this["voda_n_textBox"] = value;
@@ -109,10 +109,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string musor_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double musor_textBox {
             get {
-                return ((string)(this["musor_textBox"]));
+                return ((double)(this["musor_textBox"]));
             }
             set {
                 this["musor_textBox"] = value;
@@ -121,10 +121,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prir_gas_cena_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double prir_gas_cena_textBox {
             get {
-                return ((string)(this["prir_gas_cena_textBox"]));
+                return ((double)(this["prir_gas_cena_textBox"]));
             }
             set {
                 this["prir_gas_cena_textBox"] = value;
@@ -133,10 +133,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string raspr_prir_gas_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double raspr_prir_gas_textBox {
             get {
-                return ((string)(this["raspr_prir_gas_textBox"]));
+                return ((double)(this["raspr_prir_gas_textBox"]));
             }
             set {
                 this["raspr_prir_gas_textBox"] = value;
@@ -145,10 +145,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prir_gas_t_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double prir_gas_t_textBox {
             get {
-                return ((string)(this["prir_gas_t_textBox"]));
+                return ((double)(this["prir_gas_t_textBox"]));
             }
             set {
                 this["prir_gas_t_textBox"] = value;
@@ -157,10 +157,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string prir_gas_n_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double prir_gas_n_textBox {
             get {
-                return ((string)(this["prir_gas_n_textBox"]));
+                return ((double)(this["prir_gas_n_textBox"]));
             }
             set {
                 this["prir_gas_n_textBox"] = value;
@@ -169,10 +169,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_abonplata_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double voda_abonplata_textBox {
             get {
-                return ((string)(this["voda_abonplata_textBox"]));
+                return ((double)(this["voda_abonplata_textBox"]));
             }
             set {
                 this["voda_abonplata_textBox"] = value;
@@ -181,10 +181,10 @@ namespace Simplification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string voda_otvod_textBox {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double voda_otvod_textBox {
             get {
-                return ((string)(this["voda_otvod_textBox"]));
+                return ((double)(this["voda_otvod_textBox"]));
             }
             set {
                 this["voda_otvod_textBox"] = value;

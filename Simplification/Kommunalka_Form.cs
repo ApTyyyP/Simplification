@@ -77,10 +77,10 @@ namespace Simplification
         {
             double svet_razn, svet_rez, voda_razn, voda_rez, voda_otvod_rez, gas_razn, gas_rez, SUM;
             string t1, t2, t3, t4, t5, t6, t7, t8, t9;
-            var AR = Convert.ToInt32(arenda_textBox.Text);
+            var AR = Convert.ToDouble(arenda_textBox.Text);
             var STarif = Convert.ToDouble(svet_tarif_textBox.Text);
-            var ST = Convert.ToInt32(svet_t_textBox.Text);
-            var SN = Convert.ToInt32(svet_n_textBox.Text);
+            var ST = Convert.ToDouble(svet_t_textBox.Text);
+            var SN = Convert.ToDouble(svet_n_textBox.Text);
             var VT = Convert.ToDouble(voda_t_textBox.Text);
             var VN = Convert.ToDouble(voda_n_textBox.Text);
             var VO = Convert.ToDouble(voda_otvod_textBox.Text);
@@ -93,46 +93,46 @@ namespace Simplification
             var MUSOR = Convert.ToDouble(musor_textBox.Text);
 
             svet_razn = ST - SN;
-            svet_rez = svet_razn * STarif;
+            svet_rez = svet_razn * Math.Round(STarif, 2);
 
             voda_razn = VT - VN;
-            voda_rez = voda_razn * VG;
-            voda_otvod_rez = voda_razn * VO;
+            voda_rez = voda_razn * Math.Round(VG, 3);
+            voda_otvod_rez = voda_razn * Math.Round(VO, 1);
 
             gas_razn = PGT - PGN;
-            gas_rez = gas_razn * PG;
+            gas_rez = gas_razn * Math.Round(PG, 5);
 
-            SUM = Math.Round(AR + STarif + svet_rez + voda_rez + voda_otvod_rez + VA + gas_rez + RPG + MUSOR, 0);
+            SUM = Math.Round(AR + Math.Round(STarif, 2) + Math.Round(svet_rez, 2) + Math.Round(voda_rez, 3) + Math.Round(voda_otvod_rez, 2) + Math.Round(VA, 2) + Math.Round(gas_rez, 2) + Math.Round(RPG, 2) + Math.Round(MUSOR, 1), 1);
 
             t1 = "Аренда " + AR + " грн";
-            t2 = "Свет (" + ST + " текущее - " + SN + " начальное = " + svet_razn + " кВт) по " + STarif + " грн = " + Math.Round(svet_rez, 2) + " грн";
-            t3 = "Вода (" + VT + " текущее - " + VN + " начальное = " + Math.Round(voda_razn, 3) + " куб.) по " + VG + " грн = " + Math.Round(voda_rez, 2) + " грн";
-            t4 = "Водоотвод (за " + Math.Round(voda_razn, 3) + " куба) по " + VO + " грн = " + Math.Round(voda_rez, 2) + " грн";
-            t5 = "Вода абонплата " + VA + " грн";
-            t6 = "Природный газ (" + PGT + " текущее - " + PGN + " начальное = " + Math.Round(gas_razn, 3) + " куб.) по " + PG + " грн = " + Math.Round(gas_rez, 0) + " грн";
-            t7 = "Распределение природного газа " + RPG + " грн";
-            t8 = "Вывоз мусора " + MUSOR + " грн";
-            t9 = "Всего: " + SUM + " грн";
+            t2 = "Свет (" + ST + " текущее - " + SN + " начальное = " + svet_razn + " кВт) по " + Math.Round(STarif, 2) + " грн = " + Math.Round(svet_rez, 2) + " грн";
+            t3 = "Вода (" + VT + " текущее - " + VN + " начальное = " + voda_razn + " куб.) по " + Math.Round(VG, 3) + " грн = " + Math.Round(voda_rez, 3) + " грн";
+            t4 = "Водоотвод (за " + voda_razn + " куба) по " + Math.Round(VO, 1) + " грн = " + Math.Round(voda_otvod_rez, 2) + " грн";
+            t5 = "Вода абонплата " + Math.Round(VA, 2) + " грн";
+            t6 = "Природный газ (" + PGT + " текущее - " + PGN + " начальное = " + gas_razn + " куб.) по " + Math.Round(PG, 5) + " грн = " + Math.Round(gas_rez, 2) + " грн";
+            t7 = "Распределение природного газа " + Math.Round(RPG, 2) + " грн";
+            t8 = "Вывоз мусора " + Math.Round(MUSOR, 1) + " грн";
+            t9 = "Всего: " + Math.Round(SUM, 1) + " грн";
 
             text_as.Text = t1 + Environment.NewLine + t2 + Environment.NewLine + t3 + Environment.NewLine +
                            t4 + Environment.NewLine + t5 + Environment.NewLine + t6 + Environment.NewLine +
                            t7 + Environment.NewLine + t8 + Environment.NewLine + Environment.NewLine + t9;
 
             #region Запоминание последних введённых значений
-            Settings.Default["arenda_textBox"] = arenda_textBox.Text;
-            Settings.Default["svet_tarif_textBox"] = svet_tarif_textBox.Text;
-            Settings.Default["svet_t_textBox"] = svet_t_textBox.Text;
-            Settings.Default["svet_n_textBox"] = svet_n_textBox.Text;
-            Settings.Default["voda_cena_textBox"] = voda_cena_textBox.Text;
-            Settings.Default["voda_t_textBox"] = voda_t_textBox.Text;
-            Settings.Default["voda_n_textBox"] = voda_n_textBox.Text;
-            Settings.Default["voda_otvod_textBox"] = voda_otvod_textBox.Text;
-            Settings.Default["voda_abonplata_textBox"] = voda_abonplata_textBox.Text;
-            Settings.Default["prir_gas_cena_textBox"] = prir_gas_cena_textBox.Text;
-            Settings.Default["prir_gas_t_textBox"] = prir_gas_t_textBox.Text;
-            Settings.Default["prir_gas_n_textBox"] = prir_gas_n_textBox.Text;
-            Settings.Default["raspr_prir_gas_textBox"] = raspr_prir_gas_textBox.Text;
-            Settings.Default["musor_textBox"] = musor_textBox.Text;
+            Settings.Default["arenda_textBox"] = Convert.ToDouble(arenda_textBox.Text);
+            Settings.Default["svet_tarif_textBox"] = Convert.ToDouble(svet_tarif_textBox.Text);
+            Settings.Default["svet_t_textBox"] = Convert.ToDouble(svet_t_textBox.Text);
+            Settings.Default["svet_n_textBox"] = Convert.ToDouble(svet_n_textBox.Text);
+            Settings.Default["voda_cena_textBox"] = Convert.ToDouble(voda_cena_textBox.Text);
+            Settings.Default["voda_t_textBox"] = Convert.ToDouble(voda_t_textBox.Text);
+            Settings.Default["voda_n_textBox"] = Convert.ToDouble(voda_n_textBox.Text);
+            Settings.Default["voda_otvod_textBox"] = Convert.ToDouble(voda_otvod_textBox.Text);
+            Settings.Default["voda_abonplata_textBox"] = Convert.ToDouble(voda_abonplata_textBox.Text);
+            Settings.Default["prir_gas_cena_textBox"] = Convert.ToDouble(prir_gas_cena_textBox.Text);
+            Settings.Default["prir_gas_t_textBox"] = Convert.ToDouble(prir_gas_t_textBox.Text);
+            Settings.Default["prir_gas_n_textBox"] = Convert.ToDouble(prir_gas_n_textBox.Text);
+            Settings.Default["raspr_prir_gas_textBox"] = Convert.ToDouble(raspr_prir_gas_textBox.Text);
+            Settings.Default["musor_textBox"] = Convert.ToDouble(musor_textBox.Text);
             Settings.Default.Save();
             #endregion
         }
