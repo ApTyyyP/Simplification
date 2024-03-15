@@ -63,8 +63,9 @@ namespace Simplification
 
         private void copy_as_btn_Click(object sender, EventArgs e)
         {
+            string textData = text_as.Text;
             Clipboard.Clear();
-            Clipboard.SetText(text_as.Text);
+            Clipboard.SetData(DataFormats.Text, (Object)textData);
             MessageBox.Show("Текст скопирован.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

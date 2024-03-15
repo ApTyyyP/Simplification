@@ -16,3 +16,13 @@ D:\Test\Simplification\Simplification\obj\Debug\Simplification.Properties.Resour
 D:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csproj.GenerateResource.Cache
 D:\Test\Simplification\Simplification\obj\Debug\Simplification.exe
 D:\Test\Simplification\Simplification\obj\Debug\Simplification.pdb
+E:\Test\Simplification\Simplification\bin\Debug\Simplification.exe.config
+E:\Test\Simplification\Simplification\bin\Debug\Simplification.exe
+E:\Test\Simplification\Simplification\bin\Debug\Simplification.pdb
+E:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csproj.AssemblyReference.cache
+E:\Test\Simplification\Simplification\obj\Debug\Simplification.Kommunalka_Form.resources
+E:\Test\Simplification\Simplification\obj\Debug\Simplification.Properties.Resources.resources
+E:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csproj.GenerateResource.cache
+E:\Test\Simplification\Simplification\obj\Debug\Oplata_Kommunalki.csproj.CoreCompileInputs.cache
+E:\Test\Simplification\Simplification\obj\Debug\Simplification.exe
+E:\Test\Simplification\Simplification\obj\Debug\Simplification.pdb
