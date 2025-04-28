@@ -82,6 +82,8 @@ namespace Simplification
             return value == 0 ? string.Empty : text;
         }
 
+        private int ParseOrZeroInt(string text) => int.TryParse(text, out var value) ? value : 0;
+
         private void LoadSettings()
         {
             var settings = Settings.Default;
@@ -104,7 +106,7 @@ namespace Simplification
         private void SaveSettings()
         {
             var settings = Settings.Default;
-            settings["arenda_textBox"] = ParseOrZero(arenda_textBox.Text);
+            settings["arenda_textBox"] = ParseOrZeroInt(arenda_textBox.Text);
             settings["svet_tarif_textBox"] = ParseOrZero(svet_tarif_textBox.Text);
             settings["svet_t_textBox"] = ParseOrZero(svet_t_textBox.Text);
             settings["svet_n_textBox"] = ParseOrZero(svet_n_textBox.Text);
@@ -123,14 +125,19 @@ namespace Simplification
 
         private double ParseOrZero(string text) => double.TryParse(text, out var value) ? value : 0;
 
-        private string FormatCurrency(double value)
+        private string FormatCurrencyInt(int value)
         {
             return value.ToString("N0");
         }
 
+        private string FormatCurrency(double value)
+        {
+            return value.ToString("N2");
+        }
+
         private void addshablon_as_btn_Click(object sender, EventArgs e)
         {
-            double AR = ParseOrZero(arenda_textBox.Text);
+            int AR = ParseOrZeroInt(arenda_textBox.Text);
             double STarif = ParseOrZero(svet_tarif_textBox.Text);
             double ST = ParseOrZero(svet_t_textBox.Text);
             double SN = ParseOrZero(svet_n_textBox.Text);
@@ -153,7 +160,7 @@ namespace Simplification
             double total = Math.Round(AR + svet_rez + voda_rez + gas_rez + RPG + MUSOR);
 
             text_as.Text = $"{DateTime.Now.ToString("MMMM yyyy")}" + Environment.NewLine + Environment.NewLine + string.Join(Environment.NewLine,
-                FormatIfNotZero(AR, $"Аренда = {FormatCurrency(AR)} грн"),
+                FormatIfNotZero(AR, $"Аренда = {FormatCurrencyInt(AR)} грн"),
                 FormatIfNotZero(svet_rez, $"Свет ({ST} текущее — {SN} начальное = {ST - SN} кВт) по {FormatCurrency(STarif)} грн = {FormatCurrency(svet_rez)} грн"),
                 FormatIfNotZero(voda_rez, $"Вода ({VT} текущее — {VN} начальное = {voda_razn} куб.) по {FormatCurrency(VG)} грн = {FormatCurrency(voda_rez)} грн"),
                 FormatIfNotZero(voda_otvod_rez, $"Водоотвод (за {VT - VN} куб) по {FormatCurrency(VO)} грн = {FormatCurrency(voda_otvod_rez)} грн"),
