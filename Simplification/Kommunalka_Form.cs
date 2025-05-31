@@ -72,64 +72,77 @@ namespace Simplification
             MessageBox.Show("Текст скопирован.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // Обработчик кнопки "Выход"
         private void exit_as_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Если значение = 0, возвращаем пустую строку; иначе возвращаем текст
         private string FormatIfNotZero(double value, string text)
         {
-            return value == 0 ? string.Empty : text;
+            return (Math.Abs(value) < 0.000001) ? string.Empty : text;
         }
 
-        private int ParseOrZeroInt(string text) => int.TryParse(text, out var value) ? value : 0;
+        // Преобразует строку в int, если не удалось – возвращает 0
+        private int ParseOrZeroInt(string text)
+        {
+            return int.TryParse(text, out var v) ? v : 0;
+        }
 
+        // Преобразует строку в double, если не удалось – возвращает 0.0
+        private double ParseOrZero(string text)
+        {
+            return double.TryParse(text, out var v) ? v : 0.0;
+        }
+
+        // Загрузка сохранённых значений из Properties.Settings.Default
         private void LoadSettings()
         {
-            var settings = Settings.Default;
-            arenda_textBox.Text = settings["arenda_textBox"].ToString();
-            svet_tarif_textBox.Text = settings["svet_tarif_textBox"].ToString();
-            svet_t_textBox.Text = settings["svet_t_textBox"].ToString();
-            svet_n_textBox.Text = settings["svet_n_textBox"].ToString();
-            voda_cena_textBox.Text = settings["voda_cena_textBox"].ToString();
-            voda_t_textBox.Text = settings["voda_t_textBox"].ToString();
-            voda_n_textBox.Text = settings["voda_n_textBox"].ToString();
-            voda_otvod_textBox.Text = settings["voda_otvod_textBox"].ToString();
-            voda_abonplata_textBox.Text = settings["voda_abonplata_textBox"].ToString();
-            prir_gas_cena_textBox.Text = settings["prir_gas_cena_textBox"].ToString();
-            prir_gas_t_textBox.Text = settings["prir_gas_t_textBox"].ToString();
-            prir_gas_n_textBox.Text = settings["prir_gas_n_textBox"].ToString();
-            raspr_prir_gas_textBox.Text = settings["raspr_prir_gas_textBox"].ToString();
-            musor_textBox.Text = settings["musor_textBox"].ToString();
+            arenda_textBox.Text = Settings.Default.arenda_textBox.ToString();
+            svet_tarif_textBox.Text = Settings.Default.svet_tarif_textBox.ToString();
+            svet_t_textBox.Text = Settings.Default.svet_t_textBox.ToString();
+            svet_n_textBox.Text = Settings.Default.svet_n_textBox.ToString();
+            voda_cena_textBox.Text = Settings.Default.voda_cena_textBox.ToString();
+            voda_t_textBox.Text = Settings.Default.voda_t_textBox.ToString();
+            voda_n_textBox.Text = Settings.Default.voda_n_textBox.ToString();
+            voda_otvod_textBox.Text = Settings.Default.voda_otvod_textBox.ToString();
+            voda_abonplata_textBox.Text = Settings.Default.voda_abonplata_textBox.ToString();
+            prir_gas_cena_textBox.Text = Settings.Default.prir_gas_cena_textBox.ToString();
+            prir_gas_t_textBox.Text = Settings.Default.prir_gas_t_textBox.ToString();
+            prir_gas_n_textBox.Text = Settings.Default.prir_gas_n_textBox.ToString();
+            raspr_prir_gas_textBox.Text = Settings.Default.raspr_prir_gas_textBox.ToString();
+            musor_textBox.Text = Settings.Default.musor_textBox.ToString();
         }
 
         private void SaveSettings()
         {
-            var settings = Settings.Default;
-            settings["arenda_textBox"] = ParseOrZeroInt(arenda_textBox.Text);
-            settings["svet_tarif_textBox"] = ParseOrZero(svet_tarif_textBox.Text);
-            settings["svet_t_textBox"] = ParseOrZero(svet_t_textBox.Text);
-            settings["svet_n_textBox"] = ParseOrZero(svet_n_textBox.Text);
-            settings["voda_cena_textBox"] = ParseOrZero(voda_cena_textBox.Text);
-            settings["voda_t_textBox"] = ParseOrZero(voda_t_textBox.Text);
-            settings["voda_n_textBox"] = ParseOrZero(voda_n_textBox.Text);
-            settings["voda_otvod_textBox"] = ParseOrZero(voda_otvod_textBox.Text);
-            settings["voda_abonplata_textBox"] = ParseOrZero(voda_abonplata_textBox.Text);
-            settings["prir_gas_cena_textBox"] = ParseOrZero(prir_gas_cena_textBox.Text);
-            settings["prir_gas_t_textBox"] = ParseOrZero(prir_gas_t_textBox.Text);
-            settings["prir_gas_n_textBox"] = ParseOrZero(prir_gas_n_textBox.Text);
-            settings["raspr_prir_gas_textBox"] = ParseOrZero(raspr_prir_gas_textBox.Text);
-            settings["musor_textBox"] = ParseOrZero(musor_textBox.Text);
-            settings.Save();
+            Settings.Default.arenda_textBox = ParseOrZeroInt(arenda_textBox.Text);
+            Settings.Default.svet_tarif_textBox = ParseOrZero(svet_tarif_textBox.Text);
+            Settings.Default.svet_t_textBox = ParseOrZero(svet_t_textBox.Text);
+            Settings.Default.svet_n_textBox = ParseOrZero(svet_n_textBox.Text);
+            Settings.Default.voda_cena_textBox = ParseOrZero(voda_cena_textBox.Text);
+            Settings.Default.voda_t_textBox = ParseOrZero(voda_t_textBox.Text);
+            Settings.Default.voda_n_textBox = ParseOrZero(voda_n_textBox.Text);
+            Settings.Default.voda_otvod_textBox = ParseOrZero(voda_otvod_textBox.Text);
+            Settings.Default.voda_abonplata_textBox = ParseOrZero(voda_abonplata_textBox.Text);
+            Settings.Default.prir_gas_cena_textBox = ParseOrZero(prir_gas_cena_textBox.Text);
+            Settings.Default.prir_gas_t_textBox = ParseOrZero(prir_gas_t_textBox.Text);
+            Settings.Default.prir_gas_n_textBox = ParseOrZero(prir_gas_n_textBox.Text);
+            Settings.Default.raspr_prir_gas_textBox = ParseOrZero(raspr_prir_gas_textBox.Text);
+            Settings.Default.musor_textBox = ParseOrZero(musor_textBox.Text);
+
+            // Сохраняем все изменения в файл настроек
+            Settings.Default.Save();
         }
 
-        private double ParseOrZero(string text) => double.TryParse(text, out var value) ? value : 0;
-
+        // Форматирует целочисленную сумму (с разделителем тысяч)
         private string FormatCurrencyInt(int value)
         {
             return value.ToString("N0");
         }
 
+        // Форматирует дробную сумму (до двух знаков после запятой)
         private string FormatCurrency(double value)
         {
             return value.ToString("N2");
@@ -138,6 +151,7 @@ namespace Simplification
         private void addshablon_as_btn_Click(object sender, EventArgs e)
         {
             int AR = ParseOrZeroInt(arenda_textBox.Text);
+
             double STarif = ParseOrZero(svet_tarif_textBox.Text);
             double ST = ParseOrZero(svet_t_textBox.Text);
             double SN = ParseOrZero(svet_n_textBox.Text);
@@ -151,23 +165,26 @@ namespace Simplification
             double RPG = ParseOrZero(raspr_prir_gas_textBox.Text);
             double MUSOR = ParseOrZero(musor_textBox.Text);
 
+            // Расчёты
             double svet_rez = (ST - SN) * STarif;
             double voda_razn = VT - VN;
             double voda_rez = voda_razn * VG;
             double voda_otvod_rez = (VT - VN) * VO;
             double gas_rez = (PGT - PGN) * PG;
-
             double total = Math.Round(AR + svet_rez + voda_rez + gas_rez + RPG + MUSOR);
 
-            text_as.Text = $"{DateTime.Now.ToString("MMMM yyyy")}" + Environment.NewLine + Environment.NewLine + string.Join(Environment.NewLine,
-                FormatIfNotZero(AR, $"Аренда = {FormatCurrencyInt(AR)} грн"),
-                FormatIfNotZero(svet_rez, $"Свет ({ST} текущее — {SN} начальное = {ST - SN} кВт) по {FormatCurrency(STarif)} грн = {FormatCurrency(svet_rez)} грн"),
-                FormatIfNotZero(voda_rez, $"Вода ({VT} текущее — {VN} начальное = {voda_razn} куб.) по {FormatCurrency(VG)} грн = {FormatCurrency(voda_rez)} грн"),
-                FormatIfNotZero(voda_otvod_rez, $"Водоотвод (за {VT - VN} куб) по {FormatCurrency(VO)} грн = {FormatCurrency(voda_otvod_rez)} грн"),
-                FormatIfNotZero(gas_rez, $"Природный газ ({PGT} текущее — {PGN} начальное = {PGT - PGN} куб.) по {FormatCurrency(PG)} грн = {FormatCurrency(gas_rez)} грн"),
-                FormatIfNotZero(RPG, $"Распределение природного газа = {FormatCurrency(RPG)} грн"),
-                FormatIfNotZero(MUSOR, $"Вывоз мусора = {FormatCurrency(MUSOR)} грн")
-            ).Trim() + $"{Environment.NewLine}{Environment.NewLine}Всего: {FormatCurrency(total)} грн";
+            // Формируем итоговый текст с учётом нулевых значений (FormatIfNotZero)
+            text_as.Text = $"{DateTime.Now:MMMM yyyy}" + Environment.NewLine + Environment.NewLine
+                + string.Join(Environment.NewLine,
+                    FormatIfNotZero(AR, $"Аренда = {FormatCurrencyInt(AR)} грн"),
+                    FormatIfNotZero(svet_rez, $"Свет ({ST} текущее — {SN} начальное = {ST - SN} кВт) по {FormatCurrency(STarif)} грн = {FormatCurrency(svet_rez)} грн"),
+                    FormatIfNotZero(voda_rez, $"Вода ({VT} текущее — {VN} начальное = {voda_razn} куб.) по {FormatCurrency(VG)} грн = {FormatCurrency(voda_rez)} грн"),
+                    FormatIfNotZero(voda_otvod_rez, $"Водоотвод (за {VT - VN} куб.) по {FormatCurrency(VO)} грн = {FormatCurrency(voda_otvod_rez)} грн"),
+                    FormatIfNotZero(gas_rez, $"Природный газ ({PGT} текущее — {PGN} начальное = {PGT - PGN} куб.) по {FormatCurrency(PG)} грн = {FormatCurrency(gas_rez)} грн"),
+                    FormatIfNotZero(RPG, $"Распределение природного газа = {FormatCurrency(RPG)} грн"),
+                    FormatIfNotZero(MUSOR, $"Вывоз мусора = {FormatCurrency(MUSOR)} грн")
+                ).Trim()
+                + $"{Environment.NewLine}{Environment.NewLine}Всего: {FormatCurrency(total)} грн";
         }
 
         // Очистка значений в textBox(ах)
