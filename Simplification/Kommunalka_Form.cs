@@ -159,6 +159,7 @@ namespace Simplification
             double VN = ParseOrZero(voda_n_textBox.Text);
             double VO = ParseOrZero(voda_otvod_textBox.Text);
             double VG = ParseOrZero(voda_cena_textBox.Text);
+            double VAbon = ParseOrZero(voda_abonplata_textBox.Text);
             double PG = ParseOrZero(prir_gas_cena_textBox.Text);
             double PGT = ParseOrZero(prir_gas_t_textBox.Text);
             double PGN = ParseOrZero(prir_gas_n_textBox.Text);
@@ -171,7 +172,9 @@ namespace Simplification
             double voda_rez = voda_razn * VG;
             double voda_otvod_rez = (VT - VN) * VO;
             double gas_rez = (PGT - PGN) * PG;
-            double total = Math.Round(AR + svet_rez + voda_rez + gas_rez + RPG + MUSOR);
+
+            // double total = AR + svet_rez + voda_rez + voda_otvod_rez + gas_rez + RPG + MUSOR + VAbon;
+            int total = (int)Math.Round(AR + svet_rez + voda_rez + voda_otvod_rez + VAbon + gas_rez + RPG + MUSOR, 0, MidpointRounding.AwayFromZero);
 
             // Формируем итоговый текст с учётом нулевых значений (FormatIfNotZero)
             text_as.Text = $"{DateTime.Now:MMMM yyyy}" + Environment.NewLine + Environment.NewLine
@@ -184,7 +187,7 @@ namespace Simplification
                     FormatIfNotZero(RPG, $"Распределение природного газа = {FormatCurrency(RPG)} грн"),
                     FormatIfNotZero(MUSOR, $"Вывоз мусора = {FormatCurrency(MUSOR)} грн")
                 ).Trim()
-                + $"{Environment.NewLine}{Environment.NewLine}Всего: {FormatCurrency(total)} грн";
+                + $"{Environment.NewLine}{Environment.NewLine}Всего: {FormatCurrencyInt(total)} грн";
         }
 
         // Очистка значений в textBox(ах)
